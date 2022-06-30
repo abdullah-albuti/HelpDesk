@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" NavigationPage.HasNavigationBar="False"  BackgroundColor="WhiteSmoke"
+             x:Class="HelpDesk.PageInsertData">
+    <StackLayout>
+        <Label HeightRequest="50" FontSize="37" x:Name="addcontent"  TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center"  InputTransparent="True" Margin="0,80,0,0"></Label>
+        <StackLayout Margin="20,170,20,0" >
+            <Entry x:Name="Suptitle"  BackgroundColor="White"   PlaceholderColor="Black" HeightRequest="40"   TextColor="Black"></Entry>
+            <Entry  x:Name="Supject" BackgroundColor="White"   PlaceholderColor="Black" HeightRequest="40"   TextColor="Black"></Entry>
+            <Entry IsVisible="False" x:Name="imgurl"  BackgroundColor="White"   PlaceholderColor="Black" HeightRequest="40"   TextColor="Black"></Entry>
+            <Button  x:Name="PhotoEdit" Text="add photo" Clicked="Button_Clicked" Margin="0,20" 
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
+                   CornerRadius="20" ></Button>
+            <Button x:Name="SEnd"  Clicked="SEnd_Clicked" TextColor="White" Margin="0,20" 
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
+                   CornerRadius="20" BackgroundColor="LightGreen" />
+            <Button x:Name="Back"  Clicked="Back_Clicked" TextColor="White" 
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
+                   CornerRadius="20" BackgroundColor="LightBlue" />
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

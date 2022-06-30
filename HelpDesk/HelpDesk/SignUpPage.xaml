@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"   NavigationPage.HasNavigationBar="False"  BackgroundColor="WhiteSmoke"
+             x:Class="HelpDesk.SignUpPage">
+    <StackLayout>
+        <Label x:Name="RegPage" HeightRequest="50" FontSize="37"  TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center"  InputTransparent="True" Margin="0,80,0,0"></Label>
+
+
+
+
+        <StackLayout Margin="20,110,20,0" >
+        <Entry x:Name="UserName"   Margin="0,10,0,0" BackgroundColor="White"   PlaceholderColor="Black" HeightRequest="40"   TextColor="Black"></Entry>
+        <Entry x:Name="email"   Margin="0,10,0,0" BackgroundColor="White"   PlaceholderColor="Black" HeightRequest="40" Keyboard="Email" TextColor="Black" ></Entry>
+        <Entry x:Name="Passwords" IsPassword="True"   Margin="0,10,0,0" BackgroundColor="White"   PlaceholderColor="Black" HeightRequest="40"   TextColor="Black"></Entry>
+        <Entry x:Name="PasswordsConffert" IsPassword="True"   Margin="0,10,0,0" BackgroundColor="White"   PlaceholderColor="Black" HeightRequest="40"   TextColor="Black"></Entry>
+
+        <Button  x:Name="regis"   TextColor="White" Margin="0,20" Clicked="signupbutton_Clicked"
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
+                   CornerRadius="20" BackgroundColor="LightGreen" />
+
+        <Button    x:Name="Back"   TextColor="White"  Clicked="Back_Clicked"
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
+                   CornerRadius="20" BackgroundColor="LightBlue" />
+    </StackLayout>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             NavigationPage.HasNavigationBar="False"  BackgroundColor="WhiteSmoke"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelpDesk.LoginPage" >
+
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical"  Padding="30" Spacing="40" Margin="0,0,0,0">
+            <BoxView HeightRequest="10"/>
+            <Image x:Name="imglogin" />
+
+            <StackLayout Orientation="Vertical" Spacing="10">
+                <Entry x:Name="emails"   
+                        BackgroundColor="White"   PlaceholderColor="Black" HeightRequest="40"   
+                           Keyboard="Email"  
+                           TextColor="Black"/>
+                <Entry x:Name="Password" 
+                        BackgroundColor="White"    PlaceholderColor="Black" HeightRequest="40"   
+                           IsPassword="True"  
+                           TextColor="Black"/>
+            </StackLayout>
+
+            <Button  x:Name="login"   TextColor="White"   Clicked="login_Clicked"
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
+                   CornerRadius="20" BackgroundColor="LightGreen" />
+
+            <Button    x:Name="reg"  TextColor="White"  Clicked="reg_Clicked"
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
+                   CornerRadius="20" BackgroundColor="LightBlue" />
+        </StackLayout>
+    </ContentPage.Content>
+ 
+</ContentPage>

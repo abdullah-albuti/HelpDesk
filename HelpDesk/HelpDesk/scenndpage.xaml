@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelpDesk.scenndpage" BackgroundColor="WhiteSmoke" NavigationPage.HasNavigationBar="False"   >
+
+    <StackLayout>
+
+
+        <Label  TextColor="Black"  HorizontalOptions="CenterAndExpand" VerticalOptions="Center"  x:Name="yourname"  FontSize="20"  FontAttributes="Bold"></Label>
+        <SearchBar x:Name="Serarhbar1" TextChanged="SearchBar_TextChanged" TextColor="Black" Margin="5,0,5,5" BackgroundColor="LightGray" FontSize="Large"  ></SearchBar>
+
+        <ListView x:Name="Datagrid"   
+                    HasUnevenRows="True"  SeparatorVisibility="Default"   ItemTapped="Datagrid_ItemTapped">
+            <ListView.ItemTemplate  >
+                <DataTemplate>
+                    <ViewCell >
+                        <Frame BorderColor="LightGray" Margin="0,1,0,1" >
+                            <StackLayout Orientation="Horizontal" Padding="5" VerticalOptions="Center" MinimumHeightRequest="100">
+                            <Image Source="{Binding imgproplme}" WidthRequest="100" HeightRequest="100"/>
+                                <StackLayout >
+
+                                    <StackLayout Orientation="Vertical" Padding="2" VerticalOptions="Center">
+                                        <Label Text="{Binding UserName}" FontSize="15"  TextColor="Black" />
+
+                                        <Label Text="{Binding Subtitle}" FontSize="20"  TextColor="Black" FontAttributes="Bold"/>
+
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" Padding="2" VerticalOptions="Center">
+
+                                        <Label Text="{Binding NewsDateTime }" FontSize="16" Margin="2" TextColor="#eb3443"/>
+                                        <Label  TextColor="LightGreen"   HorizontalOptions="CenterAndExpand" VerticalOptions="Center"  Text="{Binding IsSolved}"  FontSize="12" FontAttributes="Bold" ></Label>
+
+                                    </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+        <Button  x:Name="uploud_b" Clicked="uploud_Clicked"   TextColor="White"  
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
+                   CornerRadius="20" BackgroundColor="LightGreen" Margin="5,0,5,5" />
+
+        <Button  x:Name="logout_b"  Clicked="Button_Clicked"   TextColor="White"  
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
+                   CornerRadius="20" BackgroundColor="LightBlue" Margin="5,0,5,5" />
+
+
+
+    </StackLayout>
+
+</ContentPage>

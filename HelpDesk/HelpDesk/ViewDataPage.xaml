@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HelpDesk.ViewDataPage" BackgroundColor="WhiteSmoke" NavigationPage.HasNavigationBar="False"  >
+    <StackLayout>
+     
+            <Grid>
+                <Grid.RowDefinitions>
+
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+
+
+            </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+          
+            
+
+            <!--<Label TextColor="Black" Grid.Column="1" Grid.Row="0"  x:Name="UserName" FontSize="Large" Margin="10,100,0,0" ></Label>-->
+            <Label   TextColor="Black"  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  x:Name="UserTitle" FontSize="30" FontAttributes="Bold"   />
+
+            <Entry  BackgroundColor="White" TextColor="Black"  Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  x:Name="editUserTitle" FontSize="30" FontAttributes="Bold"  />
+
+
+            <Image  Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"  x:Name="avatar" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="750" HeightRequest="750"     ></Image>
+         
+
+            <StackLayout  Grid.Column="0" Grid.Row="2"  Margin="10,0" Grid.ColumnSpan="3" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
+                <Label BackgroundColor="White" TextColor="Black" x:Name="subjlab" FontSize="Medium" FontAttributes="Bold" />
+                <Entry BackgroundColor="White" TextColor="Black" x:Name="editsubjlab" FontSize="Medium" FontAttributes="Bold" />
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+
+
+                    <Button  Margin="5,0" WidthRequest="90"   x:Name="PhotoEdit" Text="edit photo" Clicked="Button2_Clicked" FontSize="Large" BackgroundColor="LightGreen" TextColor="#000000" CornerRadius="30" FontAttributes="Bold" ></Button>
+                    <Button  Margin="5,0" WidthRequest="90"  x:Name="savedid" FontSize="Large" Clicked="saved_Clicked"  BackgroundColor="LightGreen" TextColor="#000000" CornerRadius="30" FontAttributes="Bold" ></Button>
+                    <Button  Margin="5,0" WidthRequest="90"  x:Name="cnacleid"  FontSize="Large" Clicked="cancel_Clicked"  BackgroundColor="IndianRed" TextColor="White" CornerRadius="30" FontAttributes="Bold" ></Button>
+                    <Button  Margin="5,0" WidthRequest="90"   x:Name="editid" FontSize="Large" Clicked="edit_Clicked"  BackgroundColor="LightBlue" TextColor="White" CornerRadius="30" FontAttributes="Bold" ></Button>
+
+
+                </StackLayout>
+
+            </StackLayout>
+           
+        
+            <!-- <StackLayout Grid.Row="3"  Grid.ColumnSpan="3" Margin="20,0" > -->
+
+
+
+        </Grid>
+        <ListView x:Name="xlisty"    ItemTapped="xlisty_ItemTapped"
+                      HasUnevenRows="True"  SeparatorVisibility="Default"   >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                        <Frame BorderColor="LightGray" Margin="0,0,0,0" >
+                            <StackLayout  >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+
+                                        <RowDefinition Height="*" />
+
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="2*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label  TextColor="Black" Grid.Column="0" Grid.Row="0"  HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand"  Text="{Binding nameUsercoment}" FontSize="Medium"  FontAttributes="Bold" ></Label>
+                                    <Label  TextColor="Black" Grid.Column="1"  Grid.Row="0" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" Text="{Binding COmment}" FontSize="Medium"  FontAttributes="Italic" ></Label>
+                                    <Label  TextColor="Black" Grid.Column="2" Grid.Row="0" HorizontalOptions="End" VerticalOptions="CenterAndExpand"  Text="{Binding Datecoment}" FontSize="Medium"  FontAttributes="Italic"></Label>
+                             
+                                </Grid>
+                            
+
+                            </StackLayout>
+                        </Frame>
+                                
+                    </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+
+
+
+
+
+
+
+
+            <!--</StackLayout>-->
+
+
+        <Label  x:Name="LCx"  TextColor="Black" FontAttributes="Bold" FontSize="19"></Label>
+            <Switch HorizontalOptions="StartAndExpand" x:Name="LC"  Toggled="LC_Toggled"  />
+       
+        <Entry TextColor="Black" Margin="5,0,5,5" BackgroundColor="LightGray" FontSize="Large" x:Name="commentuser" Placeholder="Enter Your Comment" ></Entry>
+        <Button x:Name="SB"  Margin="5,0,5,5" FontSize="Large" Clicked="SEnd_Clicked"  BackgroundColor="LightGreen" TextColor="#000000" CornerRadius="30" FontAttributes="Bold" ></Button>
+        <Button x:Name="BB"  Margin="5,0,5,5" FontSize="Large" Clicked="Back_Clicked"  BackgroundColor="LightBlue" TextColor="White" CornerRadius="30" FontAttributes="Bold" ></Button>
+
+
+        <!--   </StackLayout> -->
+
+
+      
+    </StackLayout>
+
+</ContentPage>
